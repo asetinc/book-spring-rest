@@ -8,18 +8,25 @@ public class Vote {
     @Id
     @GeneratedValue
     @Column(name = "VOTE_ID")
-    private Long Id;
+    private Long id;
 
     @ManyToOne
-    @JoinColumn(name="COLUMN_NAME")
+    @JoinColumn(name = "COLUMN_NAME")
     private Option option;
 
+    public Vote() {}
+
+    public Vote(Long id, Option option) {
+        this.id = id;
+        this.option = option;
+    }
+
     public Long getId() {
-        return Id;
+        return id;
     }
 
     public void setId(Long id) {
-        Id = id;
+        this.id = id;
     }
 
     public Option getOption() {

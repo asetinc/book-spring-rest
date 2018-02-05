@@ -18,7 +18,8 @@ public class Poll {
     @JoinColumn(name = "POLL_ID")
     private Set<Option> options;
 
-    public Poll() {    }
+    public Poll() {
+    }
 
     public Poll(Long id, String question, Set<Option> options) {
         this.id = id;

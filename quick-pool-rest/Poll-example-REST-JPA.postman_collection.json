@@ -1,0 +1,247 @@
+{
+	"info": {
+		"name": "Poll-example-REST-JPA",
+		"_postman_id": "5d2085a5-c244-0815-a170-895fea2a1a60",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AddPoll",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"question\" : \"Who will winn superbowl this year?\",\n\t\"options\" : [\n\t\t{\"value\" : \"New England patriots\"},\n\t\t{\"value\" : \"Seattle Seahawks\"},\n\t\t{\"value\" : \"Green Bay Packers\"},\n\t\t{\"value\" : \"Denver Branchos\"}\n\t]\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/polls",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"polls"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "AddVote",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"option\" : {\"id\": 2, \"value\" : \"New England patriots\"}\n}"
+				},
+				"url": {
+					"raw": "localhost:8080//polls/1/votes",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"",
+						"polls",
+						"1",
+						"votes"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GetPollsAsIterable",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"1\",\n\t\"question\" : \"What colour is the Mediteranian Sea\",\n\t\"options\" : [\n\t\t{\"value\" : \"Black\"},\n\t\t{\"value\" : \"Red\"},\n\t\t{\"value\" : \"Blue\"},\n\t\t{\"value\" : \"Green\"}\n\t]\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/pollsAsIterable",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pollsAsIterable"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GetPollAsList",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"1\",\n\t\"question\" : \"What colour is the Mediteranian Sea\",\n\t\"options\" : [\n\t\t{\"value\" : \"Black\"},\n\t\t{\"value\" : \"Red\"},\n\t\t{\"value\" : \"Blue\"},\n\t\t{\"value\" : \"Green\"}\n\t]\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/pollsAsList",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pollsAsList"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GetOnePoll",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"1\",\n\t\"question\" : \"What colour is the Mediteranian Sea\",\n\t\"options\" : [\n\t\t{\"value\" : \"Black\"},\n\t\t{\"value\" : \"Red\"},\n\t\t{\"value\" : \"Blue\"},\n\t\t{\"value\" : \"Green\"}\n\t]\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/polls/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"polls",
+						"1"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "UpdatePool",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"1\",\n\t\"question\" : \"What colour is the Mediteranian Sea\",\n\t\"options\" : [\n\t\t{\"value\" : \"Black\"},\n\t\t{\"value\" : \"Red\"},\n\t\t{\"value\" : \"Blue\"},\n\t\t{\"value\" : \"Green\"}\n\t]\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/polls/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"polls",
+						"1"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "DeletePool",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"1\",\n\t\"question\" : \"What colour is the Mediteranian Sea\",\n\t\"options\" : [\n\t\t{\"value\" : \"Black\"},\n\t\t{\"value\" : \"Red\"},\n\t\t{\"value\" : \"Blue\"},\n\t\t{\"value\" : \"Green\"}\n\t]\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/polls/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"polls",
+						"1"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GetResult",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/result?pollId=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"result"
+					],
+					"query": [
+						{
+							"key": "pollId",
+							"value": "1",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

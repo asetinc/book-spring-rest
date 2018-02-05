@@ -15,7 +15,8 @@ public class Option {
     @Column(name = "OPTION_VALUE")
     private String value;
 
-    public Option() {}
+    public Option() {
+    }
 
     public Option(Long id, String value) {
         this.id = id;
